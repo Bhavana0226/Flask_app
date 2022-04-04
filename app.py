@@ -4,8 +4,8 @@ from flask_login import LoginManager, UserMixin, login_user, current_user, login
 import os
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] =  "postgresql://postgres:12345@127.0.0.1:5432/loginapp"
-# app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('Database_Url')
+# app.config['SQLALCHEMY_DATABASE_URI'] =  "postgresql://postgres:12345@127.0.0.1:5432/loginapp"
+app.config['SQLALCHEMY_DATABASE_URI'] =  os.environ.get('Database_Url')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SERVER_MODE"] = True
